@@ -1,0 +1,49 @@
+service: service:svc
+name: credit_risk_classifier
+version: f564ekstscy6wcdr
+bentoml_version: 1.0.7
+creation_time: '2022-10-24T11:37:10.642250+00:00'
+labels:
+  owner: Vladimir
+  project: gallery
+models:
+- tag: credit_risk_model:tggaw4stpcs5wcdr
+  module: bentoml.xgboost
+  creation_time: '2022-10-24T08:48:15.563637+00:00'
+runners:
+- name: credit_risk_model
+  runnable_type: XGBoostRunnable
+  models:
+  - credit_risk_model:tggaw4stpcs5wcdr
+  resource_config: null
+apis:
+- name: classify
+  input_type: JSON
+  output_type: JSON
+docker:
+  distro: debian
+  python_version: '3.10'
+  cuda_version: null
+  env: null
+  system_packages: null
+  setup_script: null
+  base_image: null
+  dockerfile_template: null
+python:
+  requirements_txt: null
+  packages:
+  - xgboost
+  - sklearn
+  lock_packages: true
+  index_url: null
+  no_index: null
+  trusted_host: null
+  find_links: null
+  extra_index_url: null
+  pip_args: null
+  wheels: null
+conda:
+  environment_yml: null
+  channels: null
+  dependencies: null
+  pip: null

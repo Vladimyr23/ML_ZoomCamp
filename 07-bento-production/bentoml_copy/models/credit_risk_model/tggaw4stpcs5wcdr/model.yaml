@@ -1,0 +1,17 @@
+name: credit_risk_model
+version: tggaw4stpcs5wcdr
+module: bentoml.xgboost
+labels: {}
+options: {}
+metadata: {}
+context:
+  framework_name: xgboost
+  framework_versions:
+    xgboost: 1.6.2
+  bentoml_version: 1.0.0
+  python_version: 3.9.7
+signatures:
+  predict:
+    batchable: false
+api_version: v1
+creation_time: '2022-10-24T08:48:15.563637+00:00'
